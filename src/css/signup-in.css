@@ -1,0 +1,252 @@
+.sign-container{
+  display:flex;
+}
+.sign-welcome{
+  /* background-color: white; */
+}
+
+.left-sign{
+  background-color: #eee;
+  padding-left: 55px;
+  padding-right: 55px;
+}
+
+@media screen and (max-width: 768px) {
+  .left-sign{
+      padding: 5px;
+      margin: auto;
+    }
+}
+
+
+
+
+.right-sign{
+  /* background-color: #FBFBFB; */
+  width:512px;
+  padding: 0 30px;
+}
+@media (max-width: 768px) {
+  .right-sign{
+      display: none;
+    }
+}
+
+.sign-quote{
+  padding: 51px 0 125px 0;
+  text-align: center;
+}
+.quote-img{
+  width: 107px;
+  height: 107px;
+  border-radius: 50%;
+  background-color: #ccc;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+.quote-text{
+  text-align: center;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 275;
+  margin: auto;
+}
+
+.sign-links{
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+  padding-left:0;
+}
+.sign-links li{
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.sign-links li:hover{
+  text-decoration: underline;
+}
+
+.header-small{
+  font-size: 48px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+}
+.header-big{
+  font-size: 128px;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+  line-height: 100px;
+}
+.mobile-sign{
+  display: none;
+}
+
+.welcome-sign-btn{
+display: none;
+}
+.sign-header-text-mobile{
+  font-size: 40px;
+  margin: 0 0 35px 0;
+  padding: 0;
+  font-weight: 700;
+}
+.get-app-text{
+  height: 45px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 45px;
+}
+.get-app-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.get-app-container-mobile{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ------------- Left Side mobile ----------- */
+@media (max-width: 768px) {
+  .quote-img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .quote-text{
+    font-size: 18px;
+    width: 80%;
+  }
+  
+  .sign-links{
+    gap: 12px;
+  }
+  .sign-links li{
+    font-size: 2.2vw;
+  }
+  .header-small{
+    font-size: 7.5vw;
+
+  }
+  .header-big{
+    font-size: 20vw;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    line-height: 16vw;
+  }
+  .mobile-sign{
+    background-color:#eee;
+    display: block;
+  }
+  .welcome-sign-btn{
+    display: block;
+    width: 80%;
+    height: 74px;
+    font-weight: 700;
+    font-size: 32px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 6px;
+    margin: 0 10% 50px;
+  }
+}
+
+
+
+/* Right Side */
+.sign-header-text{
+  font-size: 40px;
+  margin: 75px 0 22px;
+  padding: 0;
+  font-weight: 700;
+}
+.sign-inputs{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding-top:25px;
+  /* border:1px solid red; */
+  /* width: 100%; */
+  width: 452px;
+  /* padding-left: 50px;
+  padding-right: 50px; */
+}
+
+.sign-terms{
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sign-terms a{
+  font-weight: 700;
+}
+
+.already-styling{
+  margin-top: 25px;
+  background-color: #afafaf;
+  border: 1px solid #afafaf;
+  color: black;
+  font-size: 24px;
+  height: 52px;
+}
+.forgot-styling{
+  margin-top: 10px;
+  margin-bottom: 158px;
+  border-radius: 3px;
+}
+
+@media (max-width:768px) {
+
+  .sign-inputs{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top:25px;
+    width: 312px;
+    
+  }
+  .sign-terms{
+    max-width: 80%;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    margin: 10px auto;
+    
+  }
+  .sign-terms a{
+    font-weight: 700;
+  }
+  .login-text{
+      margin-top: 83px;
+      font-size: 12px;
+      font-weight: 275;
+      text-align: center;
+      margin-bottom: 8px;
+  }  
+
+  .login-text{
+      margin-top: 105px;
+  }
+  .already-styling{
+    margin-top: 25px;
+  }
+  .forgot-styling{
+    margin-bottom: -15px;
+  }
+}

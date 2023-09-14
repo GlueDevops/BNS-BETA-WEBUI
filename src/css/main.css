@@ -355,8 +355,8 @@ select:focus{
 }
 .secondary-btn{
   width: 100%;
-  height: 34px;
-  font-weight: 700;
+  height: 51px;
+  /* font-weight: ; */
   font-size: 16px;
   border: 1px solid black;
   background-color: white;
@@ -379,8 +379,8 @@ select:focus{
   height: 56px;
   border: 1px solid #bebebe;
   padding: 0 24px;
-  font-size: 24px;
-  margin-bottom: 33px;
+  font-size: 14px;
+  margin-bottom: 10px;
   background-color: #F2F2F2;
 }
 .input-field:focus{
@@ -396,7 +396,7 @@ select:focus{
   width: 100%;
   display: flex;
   gap: 10px;
-  margin-bottom: 33px;
+  margin-bottom: 10px;
   /* border:1px solid red; */
 }
 
@@ -412,7 +412,7 @@ select:focus{
   border: 1px solid #bebebe;
   background: #F7F7F7;
   padding: 0 24px;
-  font-size: 24px;
+  font-size: 14px;
   background-color: #F2F2F2;
   /* border:1px solid red; */
 }

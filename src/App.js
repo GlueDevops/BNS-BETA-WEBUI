@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 // import Login from './components/Login';
 import Signup from './components/Signup';
+import Signin from './components/Signin';
 import UserProfile from './components/UserProfile';
 import Profile from './components/Profile';
 import CreatePost from './components/CreatePost';
@@ -20,7 +21,7 @@ function App() {
         <Routes> 
           <Route path='/' element={<Home />} />
           <Route path='/my-posts' element={<MyPosts />} />
-          {/* <Route path='/signin' element={<Login />} /> */}
+          <Route path='/signin' element={<Signin />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/2auth' element={<Validation />} />
           {/* <Route path='/verified' element={<Verified />} /> */}

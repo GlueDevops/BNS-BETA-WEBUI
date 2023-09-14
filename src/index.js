@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "react-datepicker/dist/react-datepicker.css"
 import './index.css';
 import './css/main.css';
-import './css/signup.css';
+import './css/signup-in.css';
 import './css/ceateEditPost.css';
 import './css/temp.css';
 import App from './App';

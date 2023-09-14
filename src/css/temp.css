@@ -1,12 +1,26 @@
 .temp-logo{
-  width: 356px;
-  height: 100px;
+  width: 179px;
+  height: 69px;
   background-color: #d9d9d9;
   color: #b8b8b8;
-  margin-top: 65px;
-  margin-bottom: 65px;
+  margin-top: 32px;
+  margin-bottom: 22px;
   font-weight: 700;
   text-align: center;
-  font-size: 36px;
-  line-height: 100px;
+  font-size: 20px;
+  line-height: 69px;
+}
+
+.temp-app{
+  width: 217px;
+  height: 73px; 
+  background-color: #AFAFAF;
+  margin-bottom: 35px;
+  border-radius: 3px;
+}
+@media (max-width:768px) {
+  .temp-app{
+    max-width: 40%;
+  }
+  
 }

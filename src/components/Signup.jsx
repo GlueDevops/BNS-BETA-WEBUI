@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 const Signup = () => {
   const [isMobileSignupOpen, setIsMobileSignupOpen] = useState(false);
   return (
-    <div className='overall-container signup-container'>
+    <div className='overall-container sign-container'>
       {/* ---------- Left Side ----------- */}
-      <div className='left-signup'>
-        <div className='signup-welcome'>
+      <div className='left-sign'>
+        <div className='sign-welcome'>
           <div className='temp-logo'>LOGO</div>
           <p className='header-small'>The Trusted</p>
           <p className='header-big'>Business Network</p>
-          <div className='signup-quote'>
+          <div className='sign-quote'>
             <div className='quote-img'></div>
             <p className='quote-text'>
               “ Dummy text refers to the bits of content that are used to fill a
@@ -19,9 +19,9 @@ const Signup = () => {
           </div>
           {/* ----- Mobile Signup form --- */}
           {isMobileSignupOpen ? (
-            <div className='mobile-signup'>
-              <form className='signup-inputs-mobile'>
-                <h1 className='signup-header-text-mobile'>SIGN UP</h1>
+            <div className='mobile-sign'>
+              <form className='sign-inputs-mobile'>
+                <h1 className='sign-header-text-mobile'>SIGN UP</h1>
                 <div className='two-cols-input-container'>
                   <input
                     type='text'
@@ -52,7 +52,7 @@ const Signup = () => {
                     placeholder='Repeat Password'
                   />
                 </div>
-                <p className='signup-terms'>
+                <p className='sign-terms'>
                   By Register, you agree to our <Link>Terms</Link>,{" "}
                   <Link>Privacy Policy</Link> and <Link>Cookies Policy</Link> . You
                   may receive email notifications from us and can opt out at anytime.
@@ -61,6 +61,11 @@ const Signup = () => {
                 <button className='main-btn already-styling'>
                   Already have an account?
                 </button>
+                <p className='get-app-text'>GET THE MOBILE APP</p>
+                <div className='get-app-container-mobile'>
+                  <div className='temp-app'></div>
+                  <div className='temp-app'></div>
+                </div>
                 {/* <p className='login-text'>Already have an account?</p>
         <button className='secondary-btn text-center'>
           <Link to='/login' className='d-block'>
@@ -71,13 +76,13 @@ const Signup = () => {
             </div>
           ) : (
             <button
-              className='main-btn welcome-signup-btn'
+              className='main-btn welcome-sign-btn'
               onClick={() => setIsMobileSignupOpen(true)}>
               SIGN UP
             </button>
           )}
 
-          <ul className='signup-links'>
+          <ul className='sign-links'>
             <li>About</li>
             <li>How its works</li>
             <li>Terms</li>
@@ -87,9 +92,9 @@ const Signup = () => {
         </div>
       </div>
       {/* ---------- Right Side ----------- */}
-      <div className='right-signup'>
-        <form className='signup-inputs'>
-          <h1 className='signup-header-text'>SIGN UP</h1>
+      <div className='right-sign'>
+        <form className='sign-inputs'>
+          <h1 className='sign-header-text'>SIGN UP</h1>
           <div className='two-cols-input-container'>
             <input
               type='text'
@@ -120,7 +125,7 @@ const Signup = () => {
               placeholder='Repeat Password'
             />
           </div>
-          <p className='signup-terms'>
+          <p className='sign-terms'>
             By Register, you agree to our <Link>Terms</Link>,{" "}
             <Link>Privacy Policy</Link> and <Link>Cookies Policy</Link> . You may
             receive email notifications from us and can opt out at anytime.
@@ -129,6 +134,11 @@ const Signup = () => {
           <button className='main-btn already-styling'>
             Already have an account?
           </button>
+          <p className='get-app-text'>GET THE MOBILE APP</p>
+          <div className='get-app-container'>
+            <div className='temp-app'></div>
+            <div className='temp-app'></div>
+          </div>
           {/* <p className='login-text'>Already have an account?</p>
         <button className='secondary-btn text-center'>
           <Link to='/login' className='d-block'>
