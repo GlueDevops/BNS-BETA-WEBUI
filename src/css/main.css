@@ -33,6 +33,10 @@ body{
   position: relative;
 }
 
+::-webkit-scrollbar {
+  height: 0px;              /* height of horizontal scrollbar ← You're missing this */
+}
+
 .react-datepicker-wrapper {
   width: 100%;
 }
