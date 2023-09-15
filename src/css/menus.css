@@ -1,0 +1,83 @@
+.menu-slider {
+  max-width: 1200px;
+  width:95%;
+  height:35px;
+  margin:auto; 
+  margin-top: 12px;
+  position: relative;
+}
+
+.menus-style {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size:smaller;
+}
+
+.nav {
+  width:100%;  
+  position: relative;
+  z-index: 2;
+  height: 2.5rem;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-top: 0.3rem;
+  /* padding-bottom: 1.5rem; */
+  padding-left: 0;
+  margin-block: 0;
+  overflow-x: auto;
+  list-style: none;
+  text-align: center;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  transition-duration: 100ms;
+  width: 100%;
+
+
+
+  justify-content: center;
+}
+
+.nav-item-style {
+  background-color: #f7f7f7;
+  color: rgb(110, 110, 110);
+  border-radius: 2rem;
+  padding: 0px 12px 0px 12px;
+  margin: 0px 12px 0px 0px;
+  cursor:pointer;
+}
+
+.nav-item-style{
+  background-color: #fff;
+  padding: 5px 25px;
+  border: 2.5px solid #d9d9d9;
+  border-radius: 20px;
+  transition-duration: 200ms;
+}
+.nav-item-style:hover{
+  background-color: #d9d9d9;
+  color: gray;
+}
+
+.menus-arrows{
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  display: none;
+}
+
+.active {
+  background-color: #aaa;
+  color: white;
+  font-weight: bold;
+}

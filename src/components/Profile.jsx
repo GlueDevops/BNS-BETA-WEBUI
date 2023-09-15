@@ -58,6 +58,7 @@ const Profile = () => {
                   className='form-control rounded-0'
                   id='firstName'
                   placeholder='name'
+                  disabled
                 />
                 <label for='firstName' className='text-secondary'>
                   First Name
@@ -69,6 +70,7 @@ const Profile = () => {
                   className='form-control rounded-0'
                   id='lastName'
                   placeholder='name'
+                  disabled
                 />
                 <label for='lastName' className='text-secondary'>
                   Last Name
@@ -77,64 +79,93 @@ const Profile = () => {
             </div>
             <div className='form-floating mb-3'>
               <input
-                type='text'
+                type='email'
                 className='form-control rounded-0'
-                id='businessName'
-                placeholder='name'
+                id='email'
+                placeholder='example@mail.com'
+                disabled
               />
-              <label for='businessName' className='text-secondary'>
-                Business Name
+              <label for='email' className='text-secondary'>
+                Email
               </label>
             </div>
             <div className='row g-2'>
               <div className='form-floating mb-3 col me-4'>
                 <input
-                  type='email'
+                  type='text'
                   className='form-control rounded-0'
-                  id='email'
-                  placeholder='example@mail.com'
+                  id='b-name'
+                  placeholder='.'
+                  disabled
                 />
-                <label for='email' className='text-secondary'>
-                  Email
+                <label htmlFor='b-name' className='text-secondary'>
+                  Business Name
                 </label>
               </div>
               <div className='form-floating mb-3 col'>
                 <input
-                  type='url'
+                  type='text'
                   className='form-control rounded-0'
-                  id='website'
-                  placeholder='www.example.com'
+                  id='role'
+                  placeholder='role'
+                  disabled
                 />
-                <label for='website' className='text-secondary'>
-                  Website
+                <label htmlFor='role' className='text-secondary'>
+                  Role
                 </label>
               </div>
             </div>
-            <select
-              className='form-select mb-3 rounded-0 py-3 fw-bold'
-              style={{ color: "#78909C" }}>
-              <option selected>Country</option>
-              <option value='1'>One</option>
-              <option value='2'>Two</option>
-              <option value='3'>Three</option>
-            </select>
-            <select
-              className='form-select mb-3 rounded-0 py-3 fw-bold'
-              style={{ color: "#78909C" }}>
-              <option selected>Industry</option>
-              <option value='1'>One</option>
-              <option value='2'>Two</option>
-              <option value='3'>Three</option>
-            </select>
-            <button
-              className='btn rounded-5 w-100 my-2 fs-5'
-              style={{
-                backgroundColor: "#5034A1",
-                color: "white",
-                padding: "15px 0",
-              }}>
-              Update Profile
-            </button>
+            <div className='form-floating mb-3'>
+              <input
+                type='email'
+                className='form-control rounded-0'
+                id='b-email'
+                placeholder='example@mail.com'
+                disabled
+              />
+              <label htmlFor='b-email' className='text-secondary'>
+                Business Email
+              </label>
+            </div>
+            <div className='form-floating mb-3'>
+              <input
+                type='text'
+                className='form-control rounded-0'
+                id='industry'
+                placeholder='example@mail.com'
+                disabled
+              />
+              <label htmlFor='industry' className='text-secondary'>
+                Industry
+              </label>
+            </div>
+            <div className='form-floating mb-3'>
+              <input
+                type='text'
+                className='form-control rounded-0'
+                id='website'
+                placeholder='website'
+                disabled
+              />
+              <label htmlFor='website' className='text-secondary'>
+                Website
+              </label>
+            </div>
+            <div className='form-floating mb-3'>
+              <input
+                type='text'
+                className='form-control rounded-0'
+                id='country'
+                placeholder='country'
+                disabled
+              />
+              <label htmlFor='country' className='text-secondary'>
+                Country
+              </label>
+            </div>
+          </div>
+          <div className="m-5">
+            Reviews here
           </div>
         </div>
       </main>

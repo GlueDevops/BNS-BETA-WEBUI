@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 const Signin = () => {
   const [isMobileSignupOpen, setIsMobileSignupOpen] = useState(false);
+  const [isShowPass, setIsShowPass] = useState(false);
   return (
     <div className='overall-container sign-container'>
       {/* ---------- Left Side ----------- */}
@@ -23,8 +23,22 @@ const Signin = () => {
               <form className='sign-inputs-mobile'>
                 <h1 className='sign-header-text-mobile'>SIGN IN</h1>
                 <input type='email' className='input-field' placeholder='Email' />
-                <input type='password' className='input-field' placeholder='Password' />
-
+                <div className='password-container'>
+                  <input
+                    type={isShowPass ? "text" : "password"}
+                    className='input-field'
+                    placeholder='Password'
+                  />
+                  <span
+                    className='password-show'
+                    onClick={() => setIsShowPass(!isShowPass)}>
+                    {isShowPass ? (
+                      <span class='material-symbols-outlined'>visibility_off</span>
+                    ) : (
+                      <span class='material-symbols-outlined'>visibility</span>
+                    )}
+                  </span>
+                </div>
                 <button className='main-btn'>Sign in</button>
                 <button className='secondary-btn forgot-styling'>
                   Forgot Password?
@@ -68,7 +82,22 @@ const Signin = () => {
         <form className='sign-inputs'>
           <h1 className='sign-header-text'>SIGN UP</h1>
           <input type='email' className='input-field' placeholder='Email' />
-                <input type='password' className='input-field' placeholder='Password' />
+          <div className='password-container'>
+            <input
+              type={isShowPass ? "text" : "password"}
+              className='input-field'
+              placeholder='Password'
+            />
+            <span
+              className='password-show'
+              onClick={() => setIsShowPass(!isShowPass)}>
+              {isShowPass ? (
+                <span class='material-symbols-outlined'>visibility_off</span>
+              ) : (
+                <span class='material-symbols-outlined'>visibility</span>
+              )}
+            </span>
+          </div>
           <button className='main-btn'>Sign in</button>
           <button className='secondary-btn forgot-styling'>Forgot Password?</button>
           <button className='main-btn already-styling'>

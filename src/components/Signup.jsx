@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Signup = () => {
   const [isMobileSignupOpen, setIsMobileSignupOpen] = useState(false);
+  const [isShowPass1, setIsShowPass1] = useState(false);
+  const [isShowPass2, setIsShowPass2] = useState(false);
   return (
     <div className='overall-container sign-container'>
       {/* ---------- Left Side ----------- */}
@@ -41,16 +43,38 @@ const Signup = () => {
                 </select>
                 <input type='email' className='input-field' placeholder='Email' />
                 <div className='two-cols-input-container'>
-                  <input
-                    type='text'
-                    className='two-cols-input-field'
-                    placeholder='Create Password'
-                  />
-                  <input
-                    type='text'
-                    className='two-cols-input-field'
-                    placeholder='Repeat Password'
-                  />
+                  <div className='password-container'>
+                    <input
+                      type={isShowPass1 ? "text" : "password"}
+                      className='two-cols-input-field'
+                      placeholder='New Password'
+                    />
+                    <span
+                      className='password-show'
+                      onClick={() => setIsShowPass1(!isShowPass1)}>
+                      {isShowPass1 ? (
+                        <span class='material-symbols-outlined'>visibility_off</span>
+                      ) : (
+                        <span class='material-symbols-outlined'>visibility</span>
+                      )}
+                    </span>
+                  </div>
+                  <div className='password-container'>
+                    <input
+                      type={isShowPass2 ? "text" : "password"}
+                      className='two-cols-input-field'
+                      placeholder='ٌRepeat Password'
+                    />
+                    <span
+                      className='password-show'
+                      onClick={() => setIsShowPass2(!isShowPass2)}>
+                      {isShowPass2 ? (
+                        <span class='material-symbols-outlined'>visibility_off</span>
+                      ) : (
+                        <span class='material-symbols-outlined'>visibility</span>
+                      )}
+                    </span>
+                  </div>
                 </div>
                 <p className='sign-terms'>
                   By Register, you agree to our <Link>Terms</Link>,{" "}
@@ -114,17 +138,39 @@ const Signup = () => {
           </select>
           <input type='email' className='input-field' placeholder='Email' />
           <div className='two-cols-input-container'>
-            <input
-              type='text'
-              className='two-cols-input-field'
-              placeholder='Create Password'
-            />
-            <input
-              type='text'
-              className='two-cols-input-field'
-              placeholder='Repeat Password'
-            />
-          </div>
+                  <div className='password-container'>
+                    <input
+                      type={isShowPass1 ? "text" : "password"}
+                      className='two-cols-input-field'
+                      placeholder='New Password'
+                    />
+                    <span
+                      className='password-show'
+                      onClick={() => setIsShowPass1(!isShowPass1)}>
+                      {isShowPass1 ? (
+                        <span class='material-symbols-outlined'>visibility_off</span>
+                      ) : (
+                        <span class='material-symbols-outlined'>visibility</span>
+                      )}
+                    </span>
+                  </div>
+                  <div className='password-container'>
+                    <input
+                      type={isShowPass2 ? "text" : "password"}
+                      className='two-cols-input-field'
+                      placeholder='ٌRepeat Password'
+                    />
+                    <span
+                      className='password-show'
+                      onClick={() => setIsShowPass2(!isShowPass2)}>
+                      {isShowPass2 ? (
+                        <span class='material-symbols-outlined'>visibility_off</span>
+                      ) : (
+                        <span class='material-symbols-outlined'>visibility</span>
+                      )}
+                    </span>
+                  </div>
+                </div>
           <p className='sign-terms'>
             By Register, you agree to our <Link>Terms</Link>,{" "}
             <Link>Privacy Policy</Link> and <Link>Cookies Policy</Link> . You may

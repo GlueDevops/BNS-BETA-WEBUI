@@ -33,6 +33,151 @@ const AccountSettings = () => {
                 />
               </div>
             </div>
+            {/* ----------- Change Name ----------*/}
+            <div
+              className='bg-white'
+              style={{ padding: "25px 30px", marginBottom: "30px" }}>
+              <div className='d-flex align-items-center fw-semibold pb-3'>
+                <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
+                  person
+                </span>
+                <p className='p-0 m-0'>CHANGE NAME</p>
+              </div>
+              <div className='d-sm-flex justify-content-start w-100 gap-3 fw-light fs-5'>
+                <div className='form-floating'>
+                  <input
+                    type='text'
+                    className='form-control rounded-0 mb-2 mb-sm-0'
+                    id='firstName'
+                    placeholder='First Name'
+                    style={{ height: "25px" }}
+                    // disabled
+                  />
+                  <label
+                    for='firstName'
+                    className='text-secondary fs-6'
+                    // style={{ padding: "5px 15px" }}
+                  >
+                    First Name
+                  </label>
+                </div>
+                <div className='form-floating'>
+                  <input
+                    type='text'
+                    className='form-control rounded-0 mb-2 mb-sm-0'
+                    id='lastName'
+                    placeholder='Last Name'
+                    style={{ height: "25px" }}
+                    // disabled
+                  />
+                  <label
+                    for='lastName'
+                    className='text-secondary fs-6'
+                    // style={{ padding: "5px 15px" }}
+                  >
+                    Last Name
+                  </label>
+                </div>
+              </div>
+              <div className='w-100 d-flex justify-content-end mt-3'>
+                <button className='main-btn-small'>Change Name</button>
+              </div>
+            </div>
+            {/* ----------- Change Role ----------*/}
+            <div
+              className='bg-white'
+              style={{ padding: "25px 30px", marginBottom: "30px" }}>
+              <div className='d-flex align-items-center fw-semibold pb-3'>
+                <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
+                  person
+                </span>
+                <p className='p-0 m-0'>CHANGE ROLE</p>
+              </div>
+              <div
+                className='d-flex justify-content-between fw-light m-auto'
+                style={{ width: "80%" }}>
+                <div className='form-floating flex-grow-1'>
+                  <select
+                    className='form-select rounded-0 py-0'
+                    style={{ color: "#78909C" }}>
+                    <option selected>Choose Tag</option>
+                    <option value='1'>One</option>
+                    <option value='2'>Two</option>
+                    <option value='3'>Three</option>
+                  </select>
+                </div>
+              </div>
+              <div className='w-100 d-flex justify-content-end mt-3'>
+                <button className='main-btn-small'>Change Role</button>
+              </div>
+            </div>
+            {/* ----------- Change Password ----------*/}
+            <div
+              className='bg-white'
+              style={{ padding: "25px 30px", marginBottom: "30px" }}>
+              <div className='d-flex align-items-center fw-semibold pb-3'>
+                <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
+                  key
+                </span>
+                <p className='p-0 m-0'>CHANGE PASSWORD</p>
+              </div>
+              <div className='d-sm-flex justify-content-start w-100 gap-3 fw-light fs-5'>
+                <div className='form-floating'>
+                  <input
+                    type='password'
+                    className='form-control rounded-0 mb-2 mb-sm-0'
+                    id='currentPassword'
+                    placeholder='Current Password'
+                    style={{ height: "25px" }}
+                    // disabled
+                  />
+                  <label
+                    for='currentPassword'
+                    className='text-secondary fs-6'
+                    // style={{ padding: "5px 15px" }}
+                  >
+                    Current Password
+                  </label>
+                </div>
+                <div className='form-floating'>
+                  <input
+                    type='password'
+                    className='form-control rounded-0 mb-2 mb-sm-0'
+                    id='newPassword'
+                    placeholder='New Password'
+                    style={{ height: "25px" }}
+                    // disabled
+                  />
+                  <label
+                    for='newPassword'
+                    className='text-secondary fs-6'
+                    // style={{ padding: "5px 15px" }}
+                  >
+                    New Password
+                  </label>
+                </div>
+                <div className='form-floating'>
+                  <input
+                    type='password'
+                    className='form-control rounded-0 '
+                    id='confirmNewPassword'
+                    placeholder='Confirm New Password'
+                    style={{ height: "25px" }}
+                    // disabled
+                  />
+                  <label
+                    for='confirmNewPassword'
+                    className='text-secondary fs-6'
+                    // style={{ padding: "5px 15px" }}
+                  >
+                    Confirm New Password
+                  </label>
+                </div>
+              </div>
+              <div className='w-100 d-flex justify-content-end mt-3'>
+                <button className='main-btn-small'>Change Password</button>
+              </div>
+            </div>
             {/* ----------- emails ---------- */}
             <div
               className='d-flex flex-column bg-white'
@@ -85,135 +230,69 @@ const AccountSettings = () => {
                 </div>
               </div>
             </div>
-            {/* ----------- Change Name ----------*/}
+            {/* ----------- Change Phone Numbers ---------- */}
             <div
-              className='bg-white'
-              style={{ padding: "25px 30px", marginBottom: "30px" }}>
-              <div className='d-flex align-items-center fw-semibold pb-3'>
-                <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
-                  person
-                </span>
-                <p className='p-0 m-0'>CHANGE NAME</p>
-              </div>
-              <div className='d-sm-flex justify-content-start w-100 gap-3 fw-light fs-5'>
-                <div className='form-floating'>
-                  <input
-                    type='text'
-                    className='form-control rounded-0 mb-2 mb-sm-0'
-                    id='firstName'
-                    placeholder='First Name'
-                    style={{ height: "25px" }}
-                    // disabled
-                  />
-                  <label
-                    for='firstName'
-                    className='text-secondary fs-6'
-                    // style={{ padding: "5px 15px" }}
-                    >
-                    First Name
-                  </label>
+              className='d-flex flex-column bg-white'
+              style={{ padding: "25px 30px 0", marginBottom: "30px" }}>
+              <div className='fw-semibold mb-5'>
+                <div className='d-flex align-items-center'>
+                  <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
+                    call
+                  </span>
+                  <p className='p-0 m-0 '>REGISTERED PHONE NUMBER</p>
                 </div>
-                <div className='form-floating'>
-                  <input
-                    type='text'
-                    className='form-control rounded-0 mb-2 mb-sm-0'
-                    id='lastName'
-                    placeholder='Last Name'
-                    style={{ height: "25px" }}
-                    // disabled
-                  />
-                  <label
-                    for='lastName'
-                    className='text-secondary fs-6'
-                    // style={{ padding: "5px 15px" }}
-                    >
-                    Last Name
-                  </label>
+                <div className='d-sm-flex justify-content-between'>
+                  <p className='p-0 m-0 fw-lighter ps-5 ms-2 pb-4 pb-sm-0'>
+                    +915656151651
+                  </p>
+
+                  {/* -------------- Phone buttons --------- */}
+
+                  <div className='d-sm-flex text-start fw-lighter fs-6 pe-4 email-buttons-style'>
+                    <div className='d-flex align-items-center'>
+                      <span class='material-symbols-outlined fs-4 text-secondary'>
+                        change_circle
+                      </span>
+                      CHANGE NUMBER
+                    </div>
+                    <div className='d-flex align-items-center px-sm-4'>
+                      <span class='material-symbols-outlined fs-4 text-secondary'>
+                        delete
+                      </span>
+                      DELETE
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className='w-100 d-flex justify-content-end mt-3'>
-                <button
-                  className='btn rounded-5 fs-6 fw-light py-2 px-5'
-                  style={{
-                    backgroundColor: "#5034A1",
-                    color: "white",
-                  }}>
-                  Change Name
-                </button>
-              </div>
-            </div>
-            {/* ----------- Change Password ----------*/}
-            <div
-              className='bg-white'
-              style={{ padding: "25px 30px", marginBottom: "30px" }}>
-              <div className='d-flex align-items-center fw-semibold pb-3'>
-                <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
-                  key
-                </span>
-                <p className='p-0 m-0'>CHANGE PASSWORD</p>
-              </div>
-              <div className='d-sm-flex justify-content-start w-100 gap-3 fw-light fs-5'>
-                <div className='form-floating'>
-                  <input
-                    type='password'
-                    className='form-control rounded-0 mb-2 mb-sm-0'
-                    id='currentPassword'
-                    placeholder='Current Password'
-                    style={{ height: "25px" }}
-                    // disabled
-                  />
-                  <label
-                    for='currentPassword'
-                    className='text-secondary fs-6'
-                    // style={{ padding: "5px 15px" }}
-                    >
-                    Current Password
-                  </label>
+              <div className='fw-semibold mb-5'>
+                <div className='d-flex align-items-center'>
+                  <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
+                    fax
+                  </span>
+                  <p className='p-0 m-0 '>WORK PHONE</p>
                 </div>
-                <div className='form-floating'>
-                  <input
-                    type='password'
-                    className='form-control rounded-0 mb-2 mb-sm-0'
-                    id='newPassword'
-                    placeholder='New Password'
-                    style={{ height: "25px" }}
-                    // disabled
-                  />
-                  <label
-                    for='newPassword'
-                    className='text-secondary fs-6'
-                    // style={{ padding: "5px 15px" }}
-                    >
-                    New Password
-                  </label>
+                <div className='d-sm-flex justify-content-between'>
+                  <p className='p-0 m-0 fw-lighter ps-5 ms-2 pb-4 pb-sm-0'>
+                    +915656151651
+                  </p>
+
+                  {/* -------------- Phone buttons --------- */}
+
+                  <div className='d-sm-flex text-start fw-lighter fs-6 pe-4 email-buttons-style'>
+                    <div className='d-flex align-items-center'>
+                      <span class='material-symbols-outlined fs-4 text-secondary'>
+                        change_circle
+                      </span>
+                      CHANGE NUMBER
+                    </div>
+                    <div className='d-flex align-items-center px-sm-4'>
+                      <span class='material-symbols-outlined fs-4 text-secondary'>
+                        delete
+                      </span>
+                      DELETE
+                    </div>
+                  </div>
                 </div>
-                <div className='form-floating'>
-                  <input
-                    type='password'
-                    className='form-control rounded-0 '
-                    id='confirmNewPassword'
-                    placeholder='Confirm New Password'
-                    style={{ height: "25px" }}
-                    // disabled
-                  />
-                  <label
-                    for='confirmNewPassword'
-                    className='text-secondary fs-6'
-                    // style={{ padding: "5px 15px" }}
-                    >
-                    Confirm New Password
-                  </label>
-                </div>
-              </div>
-              <div className='w-100 d-flex justify-content-end mt-3'>
-                <button
-                  className='btn rounded-5 fs-6 fw-light py-2 px-5'
-                  style={{
-                    backgroundColor: "#5034A1",
-                    color: "white",
-                  }}>
-                  Change Password
-                </button>
               </div>
             </div>
             {/* ----- change Industry --------- */}
@@ -228,6 +307,9 @@ const AccountSettings = () => {
               </div>
               <div className='w-100'>
                 <div className='m-auto'>
+                  <p className='ps-3 pt-3'>
+                    Please contanct support to change Industry name.
+                  </p>
                   {/* ------------Industries------------- */}
                   {/* <div
                     className='btn-group aud-grid check-style'
@@ -562,12 +644,53 @@ const AccountSettings = () => {
                     </div>
                   </div> */}
                   <div className='w-100 text-end'>
-                    <button
-                      className='btn rounded-5 fs-6 fw-light py-2 px-5 text-white'
-                      style={{ backgroundColor: "#5034A1" }}>
-                      Contanct Support
-                    </button>
+                    <button className='main-btn-small'>Contanct Support</button>
                   </div>
+                </div>
+              </div>
+            </div>
+            {/* ----------- SUB plan --------- */}
+            <div
+              className='bg-white'
+              style={{ padding: "25px 30px", marginBottom: "30px" }}>
+              <div className='d-flex align-items-center fw-semibold'>
+                <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
+                  contract
+                </span>
+                <p className='p-0 m-0'>SUBSCRIPTION PLAN</p>
+              </div>
+              <div className='m-auto'>
+                  <p className='ps-3 pt-3'>
+                    Current subscription plan : <span className="text-secondary fw-bold">SILVER</span>
+                  </p>
+                <div className='w-100 text-end'>
+                  <button className='main-btn-small bg-success border-0 me-2'>
+                    Download Invoice
+                  </button>
+                  <button className='main-btn-small border-0'>
+                    Change Plan
+                  </button>
+                </div>
+              </div>
+            </div>
+            {/* ----------- inactive account --------- */}
+            <div
+              className='bg-white'
+              style={{ padding: "25px 30px", marginBottom: "30px" }}>
+              <div className='d-flex align-items-center fw-semibold'>
+                <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
+                  person_remove
+                </span>
+                <p className='p-0 m-0'>INACTIVE ACCOUNT</p>
+              </div>
+              <div className='m-auto'>
+                  <p className='ps-3 pt-3'>
+                    You can re-activate your account by Loggin in.
+                  </p>
+                <div className='w-100 text-end'>
+                  <button className='main-btn-small bg-danger border-0'>
+                    Inactive Account
+                  </button>
                 </div>
               </div>
             </div>

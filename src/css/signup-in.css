@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 768px) {
   .left-sign{
-      padding: 5px;
+      padding: 15px;
       margin: auto;
     }
 }
@@ -149,6 +149,8 @@ display: none;
   .mobile-sign{
     background-color:#eee;
     display: block;
+    width: 90vw;
+    margin: auto;
   }
   .welcome-sign-btn{
     display: block;
@@ -210,6 +212,10 @@ display: none;
   margin-bottom: 158px;
   border-radius: 3px;
 }
+.password-container{
+  position:relative;
+  flex: 1;
+}
 
 @media (max-width:768px) {
 
@@ -245,6 +251,7 @@ display: none;
   }
   .already-styling{
     margin-top: 25px;
+    font-size: 18px;
   }
   .forgot-styling{
     margin-bottom: -15px;

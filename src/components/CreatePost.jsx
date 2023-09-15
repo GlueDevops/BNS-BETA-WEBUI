@@ -32,7 +32,7 @@ const CreatePost = () => {
                 {/* -------- Topic ----------- */}
                 <div className='mb-3'>
                   <input
-                    className='form-control placeholder-style p-2 ps-3 bg-light border-0 w-100 rounded-3 fw-light fs-5'
+                    className='form-control input-field rounded-0'
                     type='text'
                     placeholder='Add Topic'
                   />
@@ -66,12 +66,13 @@ const CreatePost = () => {
                 </div>
                 {/* -------- Image input ----------- */}
 
-                <div className='mb-3'>
+                <div className='mb-3 input-group-lg'>
                   <input
-                    className='form-control'
+                    className='form-control rounded-0'
                     type='file'
                     accept='image/*'
-                    id='formFile'
+                    // id='formFile'
+                    id="inputGroup-sizing-lg"
                   />
                   <label for='formFile' className='form-label post-add-img-label'>
                     <span>*</span>Image dimentions 250×250, Max file size 25kb
@@ -80,7 +81,7 @@ const CreatePost = () => {
                 {/* --------- Cost input ---------- */}
                 <div className='mb-3'>
                   <input
-                    className='form-control placeholder-style p-2 ps-3 bg-light border-0 w-100 rounded-3 fw-light fs-5'
+                    className='form-control input-field rounded-0'
                     type='text'
                     placeholder={`${
                       selectedValue === "product" ? "Price in USD " : "Cost in USD"
@@ -91,10 +92,11 @@ const CreatePost = () => {
 
                 <div className='mb-3'>
                   <textarea
-                    className='form-control placeholder-style pt-4 ps-3 bg-light rounded-3 border-0 fw-light fs-5'
+                    className='form-control input-field rounded-0 pt-2'
                     id='exampleFormControlTextarea1'
-                    placeholder='Add Content'
-                    rows='6'
+                    placeholder='Add Content...'
+                    rows='8'
+                    style={{minHeight:'100px'}}
                   />
                 </div>
                 {/* -------- choose Industries -------- */}
@@ -197,7 +199,7 @@ const CreatePost = () => {
                 </div>
                 {/* ---------- Choose Tag ----------- */}
                 <select
-                  className='form-select my-4 p-2 ps-3 bg-light border-0 w-100 rounded-3 fw-light fs-5'
+                  className='form-select input-field rounded-0 mt-4'
                   style={{ color: "#78909C" }}>
                   <option selected>Choose Tag</option>
                   <option value='1'>One</option>
@@ -211,7 +213,7 @@ const CreatePost = () => {
                   onChange={(date) => setStartDate(date)}
                   dateFormat='dd MMM yyyy'
                   minDate={new Date()}
-                  className='w-100 mb-4 mt-2 p-2 ps-3 bg-light border-0 rounded-3 fw-light fs-5'
+                  className='w-100 input-field rounded-0 mt-1'
                 />
                 {/* -------- Contact Hours ------ */}
                 <p>Available Hours:</p>
@@ -225,7 +227,7 @@ const CreatePost = () => {
                     timeIntervals={30}
                     timeCaption='Time'
                     dateFormat='h:mm aa'
-                    className='p-2 ps-3 bg-light border-0 rounded-3 fw-light fs-5 w-100 inline'
+                    className='p-2 input-field rounded-0 w-100 inline text-center'
                   />
                   <span>To:</span>
                   <DatePicker
@@ -236,13 +238,13 @@ const CreatePost = () => {
                     timeIntervals={30}
                     timeCaption='Time'
                     dateFormat='h:mm aa'
-                    className='p-2 ps-3 bg-light border-0 rounded-3 fw-light fs-5 w-100 inline'
+                    className='p-2 input-field rounded-0 w-100 inline text-center'
                   />
                 </div>
                 {/* ------- post button --------- */}
-                <div className='w-100 text-end pt-1 pb-4'>
+                <div className='w-100 pt-1 pb-4'>
                   <button
-                    className='button-style'
+                    className='main-btn'
                     onClick={() => console.log(selectedValue)}>
                     Post
                   </button>
