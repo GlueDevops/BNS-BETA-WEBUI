@@ -94,8 +94,7 @@ const AccountSettings = () => {
                 <p className='p-0 m-0'>CHANGE ROLE</p>
               </div>
               <div
-                className='d-flex justify-content-between fw-light m-auto'
-                style={{ width: "80%" }}>
+                className='d-flex justify-content-between fw-light'>
                 <div className='form-floating flex-grow-1'>
                   <select
                     className='form-select rounded-0 py-0'
@@ -269,7 +268,7 @@ const AccountSettings = () => {
                   <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
                     fax
                   </span>
-                  <p className='p-0 m-0 '>WORK PHONE</p>
+                  <p className='p-0 m-0'>WORK PHONE</p>
                 </div>
                 <div className='d-sm-flex justify-content-between'>
                   <p className='p-0 m-0 fw-lighter ps-5 ms-2 pb-4 pb-sm-0'>
@@ -295,7 +294,7 @@ const AccountSettings = () => {
                 </div>
               </div>
             </div>
-            {/* ----- change Industry --------- */}
+            {/* ----- change Business name --------- */}
             <div
               className='bg-white'
               style={{ padding: "25px 30px", marginBottom: "30px" }}>
@@ -303,13 +302,31 @@ const AccountSettings = () => {
                 <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
                   corporate_fare
                 </span>
-                <p className='p-0 m-0'>CHANGE INDUSTRY</p>
+                <p className='p-0 m-0'>CHANGE BUSINESS NAME</p>
               </div>
               <div className='w-100'>
                 <div className='m-auto'>
                   <p className='ps-3 pt-3'>
-                    Please contanct support to change Industry name.
+                    Please contanct support to change Business name.
                   </p>
+                  <div className='w-100 text-end'>
+                    <button className='main-btn-small'>Contanct Support</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* ----- change Business name --------- */}
+            <div
+              className='bg-white'
+              style={{ padding: "25px 30px", marginBottom: "30px" }}>
+              <div className='d-flex align-items-center fw-semibold'>
+                <span class='material-symbols-outlined fs-1 text-secondary pe-3'>
+                  construction
+                </span>
+                <p className='p-0 m-0'>CHANGE INDUSTRY</p>
+              </div>
+              <div className='w-100'>
+                <div className='m-auto'>
                   {/* ------------Industries------------- */}
                   {/* <div
                     className='btn-group aud-grid check-style'
@@ -370,96 +387,8 @@ const AccountSettings = () => {
                       for='industrycheck5'>
                       Sample Industry
                     </label>
-                    <input
-                      type='checkbox'
-                      className='btn-check'
-                      id='industrycheck6'
-                      autocomplete='off'
-                    />
-                    <label
-                      className='btn rounded-5 d-flex justify-content-center align-items-center'
-                      for='industrycheck6'>
-                      Sample Industry
-                    </label>
-                    <input
-                      type='checkbox'
-                      className='btn-check'
-                      id='industrycheck7'
-                      autocomplete='off'
-                    />
-                    <label
-                      className='btn rounded-5 d-flex justify-content-center align-items-center'
-                      for='industrycheck7'>
-                      Sample Industry
-                    </label>
-                    <input
-                      type='checkbox'
-                      className='btn-check'
-                      id='industrycheck8'
-                      autocomplete='off'
-                    />
-                    <label
-                      className='btn rounded-5 d-flex justify-content-center align-items-center'
-                      for='industrycheck8'>
-                      Sample Industry
-                    </label>
-                    <input
-                      type='checkbox'
-                      className='btn-check'
-                      id='industrycheck9'
-                      autocomplete='off'
-                    />
-                    <label
-                      className='btn rounded-5 d-flex justify-content-center align-items-center'
-                      for='industrycheck9'>
-                      Sample Industry
-                    </label>
-                    <input
-                      type='checkbox'
-                      className='btn-check'
-                      id='industrycheck10'
-                      autocomplete='off'
-                    />
-                    <label
-                      className='btn rounded-5 d-flex justify-content-center align-items-center'
-                      for='industrycheck10'>
-                      Sample Industry
-                    </label>
-                    <input
-                      type='checkbox'
-                      className='btn-check'
-                      id='industrycheck11'
-                      autocomplete='off'
-                    />
-                    <label
-                      className='btn rounded-5 d-flex justify-content-center align-items-center'
-                      for='industrycheck11'>
-                      Sample Industry
-                    </label>
-                    <input
-                      type='checkbox'
-                      className='btn-check'
-                      id='industrycheck12'
-                      autocomplete='off'
-                    />
-                    <label
-                      className='btn rounded-5 d-flex justify-content-center align-items-center'
-                      for='industrycheck12'>
-                      Sample Industry
-                    </label>
-                    <input
-                      type='checkbox'
-                      className='btn-check'
-                      id='industrycheck13'
-                      autocomplete='off'
-                    />
-                    <label
-                      className='btn rounded-5 d-flex justify-content-center align-items-center'
-                      for='industrycheck13'>
-                      Sample Industry
-                    </label>
                   </div> */}
-                  {/* <div className='aud-grid'>
+                  <div className='aud-grid'>
                     <div class='check-style'>
                       <input
                         type='radio'
@@ -642,9 +571,9 @@ const AccountSettings = () => {
                         Sample Industry
                       </label>
                     </div>
-                  </div> */}
+                  </div>
                   <div className='w-100 text-end'>
-                    <button className='main-btn-small'>Contanct Support</button>
+                    <button className='main-btn-small'>Change Industry</button>
                   </div>
                 </div>
               </div>

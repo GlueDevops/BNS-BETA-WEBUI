@@ -1,5 +1,6 @@
 import React from "react";
 import NavbarNoSearch from "./NavbarNoSearch";
+import { Rating } from "react-simple-star-rating";
 import { Link } from "react-router-dom";
 
 const Profile = () => {
@@ -9,7 +10,7 @@ const Profile = () => {
       <main
         className='d-flex m-auto bg-white'
         style={{ maxWidth: "1000px", minHeight: "calc(100vh - 57px)" }}>
-        <div className='w-100 position-relative fw-bold'>
+        <div className='w-100 position-relative'>
           <div>
             <img
               src={require("../assets/alt.webp")}
@@ -32,7 +33,7 @@ const Profile = () => {
           </div>
           {/* ----------Form ------------ */}
           <div
-            className='container position-relative'
+            className='container position-relative fw-bold'
             style={{ maxWidth: "600px", paddingTop: "80px" }}>
             <div
               className='d-flex justify-content-center align-items-center position-absolute z-3'
@@ -164,8 +165,214 @@ const Profile = () => {
               </label>
             </div>
           </div>
-          <div className="m-5">
-            Reviews here
+          {/* -------- Other Ratings ------- */}
+          <p className='pb-2 pt-5 pt-sm-4 ps-4 fs-3'> Users Reviews:</p>
+          <div className='p-3 m-4 bg-light rounded-3 mb-3'>
+            {/* ------------- Desktop header --------------- */}
+            <div className='review-header-deskop'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+                <div>
+                  <Rating
+                    readonly
+                    initialValue={3}
+                    size={20}
+                    fillColorArray={[
+                      "#f17a45",
+                      "#f19745",
+                      "#f1a545",
+                      "#f1b345",
+                      "#f1d045",
+                    ]}
+                  />
+                </div>
+              </div>
+              <p className='review-date'>31-12-2023</p>
+            </div>
+            {/* ------------- Mobile header --------------- */}
+            <div className='review-header-mobile'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+              </div>
+              <div className='d-flex justify-content-between align-items-center pb-1'>
+                <Rating
+                  readonly
+                  initialValue={3}
+                  size={20}
+                  fillColorArray={[
+                    "#f17a45",
+                    "#f19745",
+                    "#f1a545",
+                    "#f1b345",
+                    "#f1d045",
+                  ]}
+                />
+                <p className='review-date'>31-12-2023</p>
+              </div>
+            </div>
+            <p className='px-sm-5'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quae
+              consequuntur, dolores ducimus aperiam enim magni eum voluptates iste id
+              deleniti temporibus nemo perspiciatis veniam expedita omnis vero.
+              Vitae, libero officia autem ipsum sed commodi repellendus iure
+              laboriosam cum. Non a ut labore at suscipit optio sed sequi qui
+              consequatur, hic inventore odio ea illum asperiores? Sed voluptate odit
+              commodi assumenda officiis aliquid expedita culpa, vitae, eveniet
+              facere porro nisi possimus velit consequatur, sint eius laborum
+              quibusdam obcaecati aperiam unde architecto nostrum pariatur. Quod ad
+              aspernatur accusantium cumque in eveniet ipsam tempore non quisquam
+              sint? Minus molestias nihil ut? Aliquam.
+            </p>
+          </div>
+          <div className='p-3 m-4 bg-light rounded-3 mb-3'>
+            {/* ------------- Desktop header --------------- */}
+            <div className='review-header-deskop'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+                <div>
+                  <Rating
+                    readonly
+                    initialValue={3}
+                    size={20}
+                    fillColorArray={[
+                      "#f17a45",
+                      "#f19745",
+                      "#f1a545",
+                      "#f1b345",
+                      "#f1d045",
+                    ]}
+                  />
+                </div>
+              </div>
+              <p className='review-date'>31-12-2023</p>
+            </div>
+            {/* ------------- Mobile header --------------- */}
+            <div className='review-header-mobile'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+              </div>
+              <div className='d-flex justify-content-between align-items-center pb-1'>
+                <Rating
+                  readonly
+                  initialValue={3}
+                  size={20}
+                  fillColorArray={[
+                    "#f17a45",
+                    "#f19745",
+                    "#f1a545",
+                    "#f1b345",
+                    "#f1d045",
+                  ]}
+                />
+                <p className='review-date'>31-12-2023</p>
+              </div>
+            </div>
+            <p className='px-sm-5'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quae
+              consequuntur, dolores ducimus aperiam enim magni eum voluptates iste id
+              deleniti temporibus nemo perspiciatis veniam expedita omnis vero.
+              Vitae, libero officia autem ipsum sed commodi repellendus iure
+              laboriosam cum. Non a ut labore at suscipit optio sed sequi qui
+              consequatur, hic inventore odio ea illum asperiores? Sed voluptate odit
+              commodi assumenda officiis aliquid expedita culpa, vitae, eveniet
+              facere porro nisi possimus velit consequatur, sint eius laborum
+              quibusdam obcaecati aperiam unde architecto nostrum pariatur. Quod ad
+              aspernatur accusantium cumque in eveniet ipsam tempore non quisquam
+              sint? Minus molestias nihil ut? Aliquam.
+            </p>
+          </div>
+          <div className='p-3 m-4 bg-light rounded-3 mb-3'>
+            {/* ------------- Desktop header --------------- */}
+            <div className='review-header-deskop'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+                <div>
+                  <Rating
+                    readonly
+                    initialValue={3}
+                    size={20}
+                    fillColorArray={[
+                      "#f17a45",
+                      "#f19745",
+                      "#f1a545",
+                      "#f1b345",
+                      "#f1d045",
+                    ]}
+                  />
+                </div>
+              </div>
+              <p className='review-date'>31-12-2023</p>
+            </div>
+            {/* ------------- Mobile header --------------- */}
+            <div className='review-header-mobile'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+              </div>
+              <div className='d-flex justify-content-between align-items-center pb-1'>
+                <Rating
+                  readonly
+                  initialValue={3}
+                  size={20}
+                  fillColorArray={[
+                    "#f17a45",
+                    "#f19745",
+                    "#f1a545",
+                    "#f1b345",
+                    "#f1d045",
+                  ]}
+                />
+                <p className='review-date'>31-12-2023</p>
+              </div>
+            </div>
+            <p className='px-sm-5'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quae
+              consequuntur, dolores ducimus aperiam enim magni eum voluptates iste id
+              deleniti temporibus nemo perspiciatis veniam expedita omnis vero.
+              Vitae, libero officia autem ipsum sed commodi repellendus iure
+              laboriosam cum. Non a ut labore at suscipit optio sed sequi qui
+              consequatur, hic inventore odio ea illum asperiores? Sed voluptate odit
+              commodi assumenda officiis aliquid expedita culpa, vitae, eveniet
+              facere porro nisi possimus velit consequatur, sint eius laborum
+              quibusdam obcaecati aperiam unde architecto nostrum pariatur. Quod ad
+              aspernatur accusantium cumque in eveniet ipsam tempore non quisquam
+              sint? Minus molestias nihil ut? Aliquam.
+            </p>
           </div>
         </div>
       </main>

@@ -36,21 +36,40 @@ const MyPosts = () => {
                   </p>
                 </div>
               </div>
+              <div>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  className='w-100 my-3 rounded-2'
+                />
+              </div>
               <div
-                className='d-flex justify-content-between my-3'
+                className='d-flex justify-content-between mb-3'
                 style={{ fontSize: "10px" }}>
                 <p className='p-0 m-0'>Created at 20-02-2022</p>
                 <p className='p-0 m-0'>Updated at 20-02-2022</p>
               </div>
-              <div className='mb-5'>
-                <h5 className='m-0 p-0 fw-semibold'>Human Resource</h5>
+              <div className=''>
+                <div className='d-flex justify-content-between mb-1'>
+                  <h5 className='m-0 p-0 fw-semibold'>Human Resource</h5>
+                  <p>150$</p>
+                </div>
+                <pre
+                  style={{
+                    fontSize: "14px",
+                    marginBottom: "0",
+                    fontWeight: "bold",
+                  }}>
+                  09:00 AM → 05:00 PM Until 2023-12-31
+                </pre>
                 <p className='m-0 p-0'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industry's standard dummy text
                   ever since the 1500s,
                 </p>
               </div>
-              <div className='d-flex justify-content-between align-items-center mt-4'>
+              <pre className='my-2 fw-light'>Expires on 20-02-2022</pre>
+              <div className='d-flex justify-content-between align-items-center'>
                 <div className='d-flex'>
                   <span class='material-symbols-outlined'>label</span>
                   <p className='p-0 m-0'>Skills</p>
@@ -87,21 +106,40 @@ const MyPosts = () => {
                   </p>
                 </div>
               </div>
+              <div>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  className='w-100 my-3 rounded-2'
+                />
+              </div>
               <div
-                className='d-flex justify-content-between my-3'
+                className='d-flex justify-content-between mb-3'
                 style={{ fontSize: "10px" }}>
                 <p className='p-0 m-0'>Created at 20-02-2022</p>
                 <p className='p-0 m-0'>Updated at 20-02-2022</p>
               </div>
-              <div className='mb-5'>
-                <h5 className='m-0 p-0 fw-semibold'>Human Resource</h5>
+              <div className=''>
+                <div className='d-flex justify-content-between mb-1'>
+                  <h5 className='m-0 p-0 fw-semibold'>Human Resource</h5>
+                  <p>150$</p>
+                </div>
+                <pre
+                  style={{
+                    fontSize: "14px",
+                    marginBottom: "0",
+                    fontWeight: "bold",
+                  }}>
+                  09:00 AM → 05:00 PM Until 2023-12-31
+                </pre>
                 <p className='m-0 p-0'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industry's standard dummy text
                   ever since the 1500s,
                 </p>
               </div>
-              <div className='d-flex justify-content-between align-items-center mt-4'>
+              <pre className='my-2 fw-light'>Expires on 20-02-2022</pre>
+              <div className='d-flex justify-content-between align-items-center'>
                 <div className='d-flex'>
                   <span class='material-symbols-outlined'>label</span>
                   <p className='p-0 m-0'>Skills</p>
@@ -138,21 +176,40 @@ const MyPosts = () => {
                   </p>
                 </div>
               </div>
+              <div>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  className='w-100 my-3 rounded-2'
+                />
+              </div>
               <div
-                className='d-flex justify-content-between my-3'
+                className='d-flex justify-content-between mb-3'
                 style={{ fontSize: "10px" }}>
                 <p className='p-0 m-0'>Created at 20-02-2022</p>
                 <p className='p-0 m-0'>Updated at 20-02-2022</p>
               </div>
-              <div className='mb-5'>
-                <h5 className='m-0 p-0 fw-semibold'>Human Resource</h5>
+              <div className=''>
+                <div className='d-flex justify-content-between mb-1'>
+                  <h5 className='m-0 p-0 fw-semibold'>Human Resource</h5>
+                  <p>150$</p>
+                </div>
+                <pre
+                  style={{
+                    fontSize: "14px",
+                    marginBottom: "0",
+                    fontWeight: "bold",
+                  }}>
+                  09:00 AM → 05:00 PM Until 2023-12-31
+                </pre>
                 <p className='m-0 p-0'>
                   Lorem Ipsum is simply dummy text of the printing and typesetting
                   industry. Lorem Ipsum has been the industry's standard dummy text
                   ever since the 1500s,
                 </p>
               </div>
-              <div className='d-flex justify-content-between align-items-center mt-4'>
+              <pre className='my-2 fw-light'>Expires on 20-02-2022</pre>
+              <div className='d-flex justify-content-between align-items-center'>
                 <div className='d-flex'>
                   <span class='material-symbols-outlined'>label</span>
                   <p className='p-0 m-0'>Skills</p>

@@ -48,15 +48,15 @@ const Navbar = () => {
             </div>
             <Link
               to='/create-post'
-              className='button-style button-mobile text-secondary text-decoration-none mx-sm-4 mx-2'
+              className='button-style text-secondary text-decoration-none mx-2 px-2 ms-sm-3'
               style={{
                 fontSize: "12px",
-                paddingLeft: "15px",
-                paddingRight: "15px",
+                height:'40px',
+                lineHeight:'40px'
               }}>
-              Start a Post
+              <span class='material-symbols-outlined post-icon'>post_add</span>
             </Link>
-            <Link to='/conversations' className='d-flex'>
+            <Link to='/conversations' className='d-flex ms-sm-3'>
               <span
                 className='material-symbols-rounded'
                 style={{ color: "#B6D7A8" }}>
@@ -68,7 +68,7 @@ const Navbar = () => {
               <img
                 src={require("../assets/alt.webp")}
                 alt='logo'
-                className='rounded-circle border border-2 border-white ms-sm-4 ms-1'
+                className='rounded-circle border border-2 border-white ms-sm-3 ms-1'
                 style={{ height: "40px" }}
               />
             </Link>

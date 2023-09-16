@@ -32,26 +32,6 @@ const Sidebar = () => {
             <div
               style={{ margin: "10px" }}
               className='d-flex justify-content-end align-self-center '>
-              <div className='d-flex justify-content-between align-items-center w-100'>
-                <button
-                  className='button-style'
-                  style={{
-                    fontSize: "12px",
-                    paddingLeft: "30px",
-                    paddingRight: "30px",
-                  }}>
-                  Home
-                </button>
-                <button
-                  className='button-style'
-                  style={{
-                    fontSize: "12px",
-                    paddingLeft: "15px",
-                    paddingRight: "15px",
-                  }}>
-                  Start a Post
-                </button>
-              </div>
               <div className='d-flex justify-content-center align-items-center'>
                 <a href='#' style={{ color: "gray" }}>
                   <span
@@ -68,7 +48,7 @@ const Sidebar = () => {
               </div>
               <div
                 className='position-absolute'
-                style={{ top: "3rem", right: "calc(50% - 30px)" }}>
+                style={{ top: "3rem", right: "calc(50% - 50px)" }}>
                 <img
                   src={require("../assets/alt.webp")}
                   alt='profile'

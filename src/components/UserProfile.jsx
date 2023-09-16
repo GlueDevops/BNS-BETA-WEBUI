@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
+import { Rating } from "react-simple-star-rating";
 const UserProfile = () => {
+  const [rating, setRating] = useState(2);
+  const handleRating = (rate) => {
+    setRating(rate);
+  };
   return (
-    <div className="bg-light">
+    <div className='bg-light'>
       <Navbar />
-      <div className='d-flex m-auto bg-white' style={{maxWidth:'1000px',minHeight:'calc(100vh - 57px)'}}>
+      <div
+        className='d-flex m-auto bg-white'
+        style={{ maxWidth: "1000px", minHeight: "calc(100vh - 57px)" }}>
         <div className='w-100 position-relative'>
           <div>
             <img
@@ -49,11 +56,246 @@ const UserProfile = () => {
             <p className='py-2 m-0 small'>USA, California</p>
           </div>
           <div className='w-100 text-center'>
-            <button
-              className='btn rounded-5 text-white px-4 my-4 fw-lighter'
-              style={{ backgroundColor: "#5034A1" }}>
-              Start Conversations
-            </button>
+            <button className='main-btn-small'>Start Conversations</button>
+          </div>
+          {/* ------------ Rating ----------- */}
+          <form className='rating-container'>
+            <p className='pb-2 pt-4 fs-3'> Rate this User:</p>
+            <textarea
+              type='text'
+              className='input-field pt-2 ps-2'
+              placeholder='Write what you think of this user...'
+            />
+            <div className='w-100 d-flex justify-content-between align-items-center position-relative'>
+              <Rating
+                onClick={handleRating}
+                ratingValue={rating}
+                allowHover={false}
+                disableFillHover={true}
+                transition
+                showTooltip
+                initialValue={3}
+                fillColorArray={[
+                  "#f17a45",
+                  "#f19745",
+                  "#f1a545",
+                  "#f1b345",
+                  "#f1d045",
+                ]}
+                tooltipArray={["Terrible", "Bad", "Average", "Great", "Prefect"]}
+                tooltipClassName={"tooltip"}
+              />
+              <button className='rating-submit'>Submit</button>
+            </div>
+          </form>
+          {/* -------- Other Ratings ------- */}
+          <p className='pb-2 pt-5 pt-sm-4 ps-4 fs-3'> Users Reviews:</p>
+          <div className='p-3 m-4 bg-light rounded-3 mb-3'>
+            {/* ------------- Desktop header --------------- */}
+            <div className='review-header-deskop'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+                <div>
+                  <Rating
+                    readonly
+                    initialValue={3}
+                    size={20}
+                    fillColorArray={[
+                      "#f17a45",
+                      "#f19745",
+                      "#f1a545",
+                      "#f1b345",
+                      "#f1d045",
+                    ]}
+                  />
+                </div>
+              </div>
+              <p className='review-date'>31-12-2023</p>
+            </div>
+            {/* ------------- Mobile header --------------- */}
+            <div className='review-header-mobile'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+              </div>
+              <div className='d-flex justify-content-between align-items-center pb-1'>
+                <Rating
+                  readonly
+                  initialValue={3}
+                  size={20}
+                  fillColorArray={[
+                    "#f17a45",
+                    "#f19745",
+                    "#f1a545",
+                    "#f1b345",
+                    "#f1d045",
+                  ]}
+                />
+                <p className='review-date'>31-12-2023</p>
+              </div>
+            </div>
+            <p className='px-sm-5'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quae
+              consequuntur, dolores ducimus aperiam enim magni eum voluptates iste id
+              deleniti temporibus nemo perspiciatis veniam expedita omnis vero.
+              Vitae, libero officia autem ipsum sed commodi repellendus iure
+              laboriosam cum. Non a ut labore at suscipit optio sed sequi qui
+              consequatur, hic inventore odio ea illum asperiores? Sed voluptate odit
+              commodi assumenda officiis aliquid expedita culpa, vitae, eveniet
+              facere porro nisi possimus velit consequatur, sint eius laborum
+              quibusdam obcaecati aperiam unde architecto nostrum pariatur. Quod ad
+              aspernatur accusantium cumque in eveniet ipsam tempore non quisquam
+              sint? Minus molestias nihil ut? Aliquam.
+            </p>
+          </div>
+          <div className='p-3 m-4 bg-light rounded-3 mb-3'>
+            {/* ------------- Desktop header --------------- */}
+            <div className='review-header-deskop'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+                <div>
+                  <Rating
+                    readonly
+                    initialValue={3}
+                    size={20}
+                    fillColorArray={[
+                      "#f17a45",
+                      "#f19745",
+                      "#f1a545",
+                      "#f1b345",
+                      "#f1d045",
+                    ]}
+                  />
+                </div>
+              </div>
+              <p className='review-date'>31-12-2023</p>
+            </div>
+            {/* ------------- Mobile header --------------- */}
+            <div className='review-header-mobile'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+              </div>
+              <div className='d-flex justify-content-between align-items-center pb-1'>
+                <Rating
+                  readonly
+                  initialValue={3}
+                  size={20}
+                  fillColorArray={[
+                    "#f17a45",
+                    "#f19745",
+                    "#f1a545",
+                    "#f1b345",
+                    "#f1d045",
+                  ]}
+                />
+                <p className='review-date'>31-12-2023</p>
+              </div>
+            </div>
+            <p className='px-sm-5'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quae
+              consequuntur, dolores ducimus aperiam enim magni eum voluptates iste id
+              deleniti temporibus nemo perspiciatis veniam expedita omnis vero.
+              Vitae, libero officia autem ipsum sed commodi repellendus iure
+              laboriosam cum. Non a ut labore at suscipit optio sed sequi qui
+              consequatur, hic inventore odio ea illum asperiores? Sed voluptate odit
+              commodi assumenda officiis aliquid expedita culpa, vitae, eveniet
+              facere porro nisi possimus velit consequatur, sint eius laborum
+              quibusdam obcaecati aperiam unde architecto nostrum pariatur. Quod ad
+              aspernatur accusantium cumque in eveniet ipsam tempore non quisquam
+              sint? Minus molestias nihil ut? Aliquam.
+            </p>
+          </div>
+          <div className='p-3 m-4 bg-light rounded-3 mb-3'>
+            {/* ------------- Desktop header --------------- */}
+            <div className='review-header-deskop'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+                <div>
+                  <Rating
+                    readonly
+                    initialValue={3}
+                    size={20}
+                    fillColorArray={[
+                      "#f17a45",
+                      "#f19745",
+                      "#f1a545",
+                      "#f1b345",
+                      "#f1d045",
+                    ]}
+                  />
+                </div>
+              </div>
+              <p className='review-date'>31-12-2023</p>
+            </div>
+            {/* ------------- Mobile header --------------- */}
+            <div className='review-header-mobile'>
+              <div className='d-flex align-items-center gap-2'>
+                <img
+                  src={require("../assets/alt.webp")}
+                  alt=''
+                  width={40}
+                  className='rounded-circle border-2 border border-white'
+                />
+                <p className='fs-5'>Majd Abed</p>
+              </div>
+              <div className='d-flex justify-content-between align-items-center pb-1'>
+                <Rating
+                  readonly
+                  initialValue={3}
+                  size={20}
+                  fillColorArray={[
+                    "#f17a45",
+                    "#f19745",
+                    "#f1a545",
+                    "#f1b345",
+                    "#f1d045",
+                  ]}
+                />
+                <p className='review-date'>31-12-2023</p>
+              </div>
+            </div>
+            <p className='px-sm-5'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quae
+              consequuntur, dolores ducimus aperiam enim magni eum voluptates iste id
+              deleniti temporibus nemo perspiciatis veniam expedita omnis vero.
+              Vitae, libero officia autem ipsum sed commodi repellendus iure
+              laboriosam cum. Non a ut labore at suscipit optio sed sequi qui
+              consequatur, hic inventore odio ea illum asperiores? Sed voluptate odit
+              commodi assumenda officiis aliquid expedita culpa, vitae, eveniet
+              facere porro nisi possimus velit consequatur, sint eius laborum
+              quibusdam obcaecati aperiam unde architecto nostrum pariatur. Quod ad
+              aspernatur accusantium cumque in eveniet ipsam tempore non quisquam
+              sint? Minus molestias nihil ut? Aliquam.
+            </p>
           </div>
         </div>
       </div>

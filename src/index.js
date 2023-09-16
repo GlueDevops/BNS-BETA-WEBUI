@@ -8,6 +8,7 @@ import "react-datepicker/dist/react-datepicker.css"
 import './index.css';
 import './css/main.css';
 import './css/menus.css';
+import './css/profile.css';
 import './css/signup-in.css';
 import './css/ceateEditPost.css';
 import './css/temp.css';

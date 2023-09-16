@@ -33,9 +33,13 @@ body{
   position: relative;
 }
 
-::-webkit-scrollbar {
-  height: 0px;              /* height of horizontal scrollbar ← You're missing this */
+.star-svg{
+  display:inline;
 }
+
+/* ::-webkit-scrollbar {
+  height: 0px;
+} */
 
 .react-datepicker-wrapper {
   width: 100%;
@@ -91,6 +95,17 @@ body{
   outline-width: 0;
   border-color: #5034A1;
   box-shadow: 0 0 0 0.2rem #4f34a157;
+}
+.aud-grid .check-style label{
+  font-size: 14px !important; 
+  /* border-radius: 20px !important; */
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 10px;
+  /* transition-duration: 200ms; */
+  user-select: none;
+  cursor: pointer;
 }
 .check-style label{
   font-size: 10px !important; 
@@ -190,6 +205,7 @@ body{
   grid-template-columns: repeat(4, 1fr);;
   column-gap: 20px;
   row-gap: 20px;
+  padding-top: 20px;
 }
 .industries-grid{
   display: grid;
@@ -297,7 +313,7 @@ select:focus{
   }
   .button-style{
     font-size: 12px !important;
-    padding: 5px 15px !important;
+    padding: 5px 15px ;
   }
   .sidebar-mobile{
     position: fixed;
@@ -306,7 +322,7 @@ select:focus{
     padding: 0 7px !important;
   }
   .search-mobile{
-    width: 100px !important;
+    width: 150px !important;
   }
   .left-side-msg{
     max-width: 60%;
@@ -475,7 +491,7 @@ select:focus{
   justify-content: center;
   align-items: center;
   background-color: white;
-  border: 1px solid #ccc;
+  border: 2.5px solid #d9d9d9;
   border-radius: 30px;
   padding: 5px;
   margin-left: 5px;
@@ -511,6 +527,14 @@ select:focus{
   align-items: center;
   border-radius: 50%;
 }
+.search_icon {
+  color: gray;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
 @media (max-width:768px) {
   .searchbar:hover > .search_input {
     padding: 0 5px;
@@ -528,7 +552,7 @@ select:focus{
 @media (max-width:450px) {
   .searchbar:hover > .search_input {
     padding: 0 5px;
-    width: 100px;
+    width: 110px;
     /* flex: 1; */
     transition: width 0.4s linear;
   }

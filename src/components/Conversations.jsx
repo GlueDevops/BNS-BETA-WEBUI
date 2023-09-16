@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import { useGlobal } from "../Context/context";
 import NavbarNoSearch from "./NavbarNoSearch";
+import { Link } from "react-router-dom";
 const Conversations = () => {
   const { switchSidebar } = useGlobal();
   return (
@@ -37,9 +38,9 @@ const Conversations = () => {
                   <p className='p-0 m-0 small'>
                     Infrastructure - Service, USA, California.
                   </p>
-                  <button className='p-0 m-0 border-0 bg-transparent small'>
+                  <Link to="/user-profile" className='p-0 m-0 border-0 bg-transparent small'>
                     View Profile
-                  </button>
+                  </Link>
                 </div>
               </div>
               <div className='d-flex justify-content-center align-items-center pe-2 pe-sm-5'>
