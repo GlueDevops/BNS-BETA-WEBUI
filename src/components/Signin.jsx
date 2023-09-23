@@ -1,7 +1,58 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { SIGNIN, http } from "../api";
+import { toast } from "react-hot-toast";
+import { Link } from "react-router-dom";
 const Signin = () => {
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+
+  // const [check, setCheck] = useState(false);
+  const [emailWarning, setEmailWarning] = useState(false);
+  const [isPasswordShort, setIsPasswordShort] = useState(false);
+  const validateEmail = (mail) => {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      return true;
+    }
+    return false;
+  };
   const [isMobileSignupOpen, setIsMobileSignupOpen] = useState(false);
   const [isShowPass, setIsShowPass] = useState(false);
+
+  async function handleSignin() {
+    if (!validateEmail(emailRef.current.value)) setEmailWarning(true);
+    if (passwordRef.current.value.length < 8) setIsPasswordShort(true);
+    if (
+      !validateEmail(emailRef.current.value) ||
+      passwordRef.current.value.length < 8
+    )
+      return null;
+    await http.get("/sanctum/csrf-cookie");
+    await http
+      .post(SIGNIN, {
+        email: emailRef.current.value,
+        password: passwordRef.current.value,
+      })
+      .then((res) => {
+        if (res.status === 201) {
+          console.log(res);
+          // if (check)
+          localStorage.setItem("token", res.data?.token);
+          // else sessionStorage.setItem("token", res.data?.token);
+          // window.location = "/home";
+        }
+        if (res.status === 200) {
+          toast.error(res);
+        }
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  }
+  const submit = (e) => {
+    e.preventDefault();
+    handleSignin();
+  };
+
   return (
     <div className='overall-container sign-container'>
       {/* ---------- Left Side ----------- */}
@@ -20,32 +71,63 @@ const Signin = () => {
           {/* ----- Mobile Signin form --- */}
           {isMobileSignupOpen ? (
             <div className='mobile-sign'>
-              <form className='sign-inputs-mobile'>
+              <form className='sign-inputs-mobile' onSubmit={(e) => submit(e)}>
                 <h1 className='sign-header-text-mobile'>SIGN IN</h1>
-                <input type='email' className='input-field' placeholder='Email' />
+                <input
+                  type='email'
+                  className='input-field'
+                  ref={emailRef}
+                  maxLength={75}
+                  onChange={() => {
+                    setEmailWarning(false);
+                  }}
+                  placeholder='Email'
+                />
+                {emailWarning ? (
+                  <div
+                    className='require-sign'
+                    style={{ textAlign: "start", paddingBottom: "10px" }}>
+                    Email is not valid{" "}
+                  </div>
+                ) : null}
                 <div className='password-container'>
                   <input
                     type={isShowPass ? "text" : "password"}
                     className='input-field'
                     placeholder='Password'
+                    ref={passwordRef}
+                    onChange={() => {
+                      setIsPasswordShort(false);
+                    }}
                   />
                   <span
                     className='password-show'
                     onClick={() => setIsShowPass(!isShowPass)}>
                     {isShowPass ? (
-                      <span class='material-symbols-outlined'>visibility_off</span>
+                      <span className='material-symbols-outlined'>
+                        visibility_off
+                      </span>
                     ) : (
-                      <span class='material-symbols-outlined'>visibility</span>
+                      <span className='material-symbols-outlined'>visibility</span>
                     )}
                   </span>
+                  {isPasswordShort ? (
+                    <div
+                      className='require-sign'
+                      style={{ textAlign: "start", paddingBottom: "10px" }}>
+                      Password must contain at least 8 characters
+                    </div>
+                  ) : null}
                 </div>
                 <button className='main-btn'>Sign in</button>
                 <button className='secondary-btn forgot-styling'>
                   Forgot Password?
                 </button>
-                <button className='main-btn already-styling'>
+                <Link
+                  to='/signup'
+                  className='main-btn already-styling d-flex justify-content-center align-items-center'>
                   Don't have an account? Sign up
-                </button>
+                </Link>
 
                 <p className='get-app-text'>GET THE MOBILE APP</p>
                 <div className='get-app-container-mobile'>
@@ -79,30 +161,59 @@ const Signin = () => {
       </div>
       {/* ---------- Right Side ----------- */}
       <div className='right-sign'>
-        <form className='sign-inputs'>
+        <form className='sign-inputs' onSubmit={(e) => submit(e)}>
           <h1 className='sign-header-text'>SIGN UP</h1>
-          <input type='email' className='input-field' placeholder='Email' />
+          <input
+            type='email'
+            className='input-field'
+            ref={emailRef}
+            maxLength={75}
+            onChange={() => {
+              setEmailWarning(false);
+            }}
+            placeholder='Email'
+          />
+          {emailWarning ? (
+            <div
+              className='require-sign'
+              style={{ textAlign: "start", paddingBottom: "10px" }}>
+              Email is not valid{" "}
+            </div>
+          ) : null}
           <div className='password-container'>
             <input
               type={isShowPass ? "text" : "password"}
               className='input-field'
               placeholder='Password'
+              ref={passwordRef}
+              onChange={() => {
+                setIsPasswordShort(false);
+              }}
             />
             <span
               className='password-show'
               onClick={() => setIsShowPass(!isShowPass)}>
               {isShowPass ? (
-                <span class='material-symbols-outlined'>visibility_off</span>
+                <span className='material-symbols-outlined'>visibility_off</span>
               ) : (
-                <span class='material-symbols-outlined'>visibility</span>
+                <span className='material-symbols-outlined'>visibility</span>
               )}
             </span>
+            {isPasswordShort ? (
+              <div
+                className='require-sign'
+                style={{ textAlign: "start", paddingBottom: "10px" }}>
+                Password must contain at least 8 characters
+              </div>
+            ) : null}
           </div>
           <button className='main-btn'>Sign in</button>
           <button className='secondary-btn forgot-styling'>Forgot Password?</button>
-          <button className='main-btn already-styling'>
+          <Link
+            to='/signup'
+            className='main-btn already-styling d-flex justify-content-center align-items-center'>
             Don't have an account? Sign up
-          </button>
+          </Link>
           <p className='get-app-text'>GET THE MOBILE APP</p>
           <div className='get-app-container'>
             <div className='temp-app'></div>
